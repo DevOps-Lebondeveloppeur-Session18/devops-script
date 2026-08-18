@@ -31,6 +31,20 @@ services:
     networks:
       - backend-api-network  # Connect the service to the defined network
 
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://root:pass-123@mongodb:27017/
+      ME_CONFIG_BASICAUTH_ENABLED: true
+      ME_CONFIG_BASICAUTH_USERNAME: user
+      ME_CONFIG_BASICAUTH_PASSWORD: password
+    networks:
+      - backend-api-network  # Connect the service to the defined network
+
 # Define custom network for the services to communicate with each other
 networks:
   backend-api-network:
