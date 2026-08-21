@@ -2,9 +2,7 @@ services:
   frontend-app:
     image : hedilmaaoui/front-session18
     container_name: frontend-app  # Name of the container
+    environment:
+      - VITE_API_URL=https://api.158.lebondeveloppeur.net/  #n7ot url API Backend
     ports:
       - '5000:80' #container port kima n7eb , 80 container port
-
-#parametre mich barcha donc juste commande
-#docker run -d -p 5000:80 hedilmaaoui/front-session18
-#npuliw image toul 3al vps sans docker compose lfichier hetha
