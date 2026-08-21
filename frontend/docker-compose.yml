@@ -1,9 +1,7 @@
 services:
-  backend-api:
+  frontend-app:
     image : hedilmaaoui/front-session18
     container_name: frontend-app  # Name of the container
-    env_file:
-      - .env
     ports:
       - '5000:80' #container port kima n7eb , 80 container port
 
